@@ -1,18 +1,33 @@
 focus_tree = {
 	id = TEF_focus_tree
-	
 	country = {
 		factor = 0
 		modifier = {
 			add = 100
 			original_tag = TEF
 		}
-	}
-	
-	default = no
+	 }
+
+	 default = no
 	reset_on_civilwar = no
 	continuous_focus_position = {
 		x = 10
 		y = 2500
 	}
+
+	focus = {
+		id = UKR_national_unity
+		icon = GFX_goal_anti_comintern_pact
+		x = 0
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 150
+			set_variable = {
+				var = UKR_national_unity_completed
+				value = 1
+			}
+		}
+	}
+
 }
