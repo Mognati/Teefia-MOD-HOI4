@@ -1,4 +1,4 @@
-capital = 11437 ##Наша столица
+capital = 11437 # Столица (провинция)
 
 oob = "TEF_1936" ##GEG - Тег, заменить
 
@@ -48,23 +48,6 @@ create_country_leader = {
     expire = "1965.1.1"
     ideology = centrism
     traits = {
-        #
-    }
-}
-
-# Лидер Страны
-create_country_leader = {
-    name = "Mega Lider"
-    desc = ""
-    picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds" #Картинка
-    expire = "1965.1.1" #Когда умрет
-    ideology = stalinism
-	##За какую Идеологию (входит в types у коммунистов)
-    #conservatism, liberalism и socialism - демократия
-    #marxism, leninism, stalinism, anti_revisionism, anarchist_communism - коммунизм
-    #nazism, fascism_ideology, falangism, rexism - национализм 
-    #despotism, oligarchism, moderatism и moderatism - нейтралитет 
-    traits = {
-        #
+        eager_commander
     }
 }

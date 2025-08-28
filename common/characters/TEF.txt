@@ -1,0 +1,16 @@
+character = {
+	TEF_Fedir_Storubel = {
+		name = TEF_Fedir_Storubel
+		portraits = {
+			civilian = {
+				large = GFX_Fedir_storubel
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			traits = { ICE_revolutionary_educator }
+		}
+
+
+	}
+}
