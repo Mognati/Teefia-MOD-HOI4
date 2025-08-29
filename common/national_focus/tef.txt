@@ -8,7 +8,7 @@ focus_tree = {
 		}
 	 }
 
-	 default = no
+	default = no
 	reset_on_civilwar = no
 	continuous_focus_position = {
 		x = 10
@@ -23,10 +23,6 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			add_political_power = 150
-			set_variable = {
-				var = UKR_national_unity_completed
-				value = 1
-			}
 		}
 	}
 
