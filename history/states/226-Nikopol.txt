@@ -13,15 +13,16 @@ state={
 	history={
 		owner = TEF
 		victory_points = {
-			11437 10 
+			11437 25 
 		}
 		victory_points = {
-			11561 1
+			11561 5
 		}
 		buildings = {
 			infrastructure = 2 #was: 5
 			industrial_complex = 2
 			air_base = 1
+			arms_factory = 2
 		}
 		add_core_of = TEF
 	}

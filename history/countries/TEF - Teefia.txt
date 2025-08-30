@@ -1,35 +1,48 @@
-capital = 226
+capital = 226 #Столиця
 
-set_politics = {
-	ruling_party = uncertainty
+set_politics = { 
+	ruling_party = national_democracy
 	last_election = "1936.1.1"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 	
 }
 
-set_party_name = {
-	ideology = uncertainty
-	long_name = TEF_UNCERTAINTY_NAME
-	name = TEF_UNCERTAINTY_NAME_SHORT
-}
-
-
-
 set_popularities = {
-	communism = 70
+	national_democracy = 70
+	fascism = 15
 	neutrality = 10
-	democratic = 10
-	fascism = 10
+	communism = 5
 }
 create_country_leader = {
 	name = TEF_Fedir_Storubel
 	desc = TEF_Fedir_Storubel_desc
 	picture = GFX_Fedir_Storubel
-	ideology = socialism
+	ideology = national_democracy
 	traits = { ICE_revolutionary_educator }
 	expire = 1938.10.24
 }
-oob = "TEF_1936" ##GEG - Тег, заменить
+oob = "TEF_1936" #
 
-set_research_slots = 1 #Количество ячеек исследования
+set_research_slots = 1 #Кількість слотів дослідження
+
+set_party_name = { 
+	ideology = national_democracy #Назва партії
+	long_name = TEF_NATIONAL_DEMOCRACY_LONG_NAME #Повна назва партії
+	name = TEF_NATIONAL_DEMOCRACY_NAME #Коротка назва партії
+}
+set_party_name = {
+	ideology = communism
+	long_name = TEF_COMMUNISM_LONG_NAME
+	name = TEF_COMMUNISM_NAME
+}
+set_party_name = {
+	ideology = neutrality
+	long_name = TEF_NEUTRALITY_LONG_NAME
+	name = TEF_NEUTRALITY_NAME
+}
+set_party_name = {
+	ideology = fascism
+	long_name = TEF_FASCISM_LONG_NAME
+	name = TEF_FASCISM_NAME
+}

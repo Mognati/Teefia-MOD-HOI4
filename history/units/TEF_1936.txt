@@ -1,9 +1,9 @@
-division_template = {
-	name = "Garnizon"
-	regiments = {
-		cavalry = {
-			x = 0
-			y = 0
+division_template = { #створення шаблонів військ
+	name = "Garnizon" #назва шаблону
+	regiments = { 
+		cavalry = {	 #тип підрозділу
+			x = 0 	#координата підрозділу по X
+			y = 0  	#координата підрозділу по Y
 		}
 		cavalry = {
 			x = 1
@@ -16,12 +16,16 @@ division_template = {
 		cavalry = {
 			x = 1
 			y = 1
+		}
+		cavalry = {
+			x = 1
+			y = 2
 		}
 	}
 }
 
 division_template = {
-	name = "Kozatsky Batal'yon"
+	name = "Revolutsionnyy Polk"
 	regiments = {
 		cavalry = {
 			x = 0
@@ -61,65 +65,55 @@ division_template = {
 	}
 }
 
-units = {
+units = { #спавн юнітів
 	division = {
-		location = 525
-		division_template = "Kozatsky Batal'yon"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
+		location = 9419 #розташування юніта (провінція)
+		division_template = "Revolutsionnyy Polk" #шаблон юніта
+		division_name = { 
+			is_name_ordered = yes #чи буде ім'я юніта за порядком
+			name_order = 1 #номер юніта в порядку створення
 		}
-		start_equipment_factor = 0.5
-		start_experience_factor = 0.2
-	}
-	division = {
-		location = 525
-		division_template = "Kozatsky Batal'yon"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 2
-		}
-		start_equipment_factor = 0.5
-		start_experience_factor = 0.2
-	}
-	division = {
-		location = 525
-		division_template = "Garnizon"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		start_equipment_factor = 0.5
-		start_experience_factor = 0.2
-	}
-	division = {
-		location = 525
-		division_template = "Garnizon"
+		start_equipment_factor = 0.3 #фактор початкового обладнання (від 0 до 1)
+		start_experience_factor = 0.3 #фактор початкового досвіду (від 0 до 1)
+	} 
+division = {
+		location = 9419
+		division_template = "Revolutsionnyy Polk"
 		division_name = {
 			is_name_ordered = yes
 			name_order = 2
 		}
-		start_equipment_factor = 0.5
-		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+		start_experience_factor = 0.3
 	}
-	division = {
-		location = 525
-		division_template = "Garnizon"
+division = {
+		location = 9419
+		division_template = "Revolutsionnyy Polk"
 		division_name = {
 			is_name_ordered = yes
 			name_order = 3
 		}
-		start_equipment_factor = 0.5
-		start_experience_factor = 0.2
-	}
-	division = {
-		location = 525
-		division_template = "Garnizon"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 4
-		}
-		start_equipment_factor = 0.5
-		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+		start_experience_factor = 0.3
 	}
 }
+
+instant_effect = {
+	add_equipment_production = { #додавання виробництва обладнання
+		equipment = { 
+			type = infantry_equipment_0 #тип обладнання (зараз використовується піхотне обладнання "0" )
+			creator = "TEF" #країна, яка створює обладнання (тег країни)
+		}
+	
+		requested_factories = 3 #кількість фабрик, які будуть створювати обладнання
+			progress = 0.20 #прогрес виробництва обладнання (від 0 до 1)
+			efficiency = 60 #ефективність виробництва обладнання (від 0 до 100)
+	}	
+	add_building_construction = { #додавання черги будівництва
+		type = bunker #тип будівлі (в даному випадку бункер)
+		level = 1 #рівень будівлі до якого буде будуватися будівля
+		province = 568 #провінція, в якій буде будуватися будівля
+	}
+
+}
+

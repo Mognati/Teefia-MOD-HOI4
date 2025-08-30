@@ -1,0 +1,45 @@
+ideologies = { #Ідеології
+	
+	national_democracy = { #Назва ідеології
+		
+		types = {
+			national_democracy = {}
+		}
+		
+		color =  {0 123 167} #колір ідеології в RGB форматі
+
+		
+	
+		dynamic_faction_names = { 
+			"FACTION_NAME_NATIONAL_DEMOCRATIC"
+		}
+	
+		rules = {
+			can_create_collaboration_government = no #чи може створювати днр в крайні
+			can_send_volunteers = yes #чи може відправляти добровольців
+			can_puppet = yes #чи може створювати сателітні держави
+			can_force_government = no #чи може силою змінювати уряд
+			can_guarantee_other_ideologies = yes #чи може гарантувати інші ідеології
+			can_declare_war_on_same_ideology = yes #чи може оголошувати війну країнам з такою ж ідеологією
+		}
+		
+		can_host_government_in_exile = no #чи може країна приймати уряд у вигнанні
+		war_impact_on_world_tension = 0.05 #вплив війни на світову напругу
+		faction_impact_on_world_tension = 0.05 #вплив ідеології фракції на світову напругу
+	 
+		modifiers = {
+			generate_wargoal_tension = 0.5 #модифікатор напруги при створенні приводу для війни
+			join_faction_tension = 1.0 #модифікатор напруги при вступі до фракції
+			send_volunteer_factor = 0.3 #модифікатор кількості добровольців, яких може відправити країна
+			lend_lease_tension = 0.50 #модифікатор напруги при наданні ленд-лізу
+			civilian_intel_to_others = 25 #модифікатор розвідданих, які отримують інші країни
+			army_intel_to_others = 15 #модифікатор армійських розвідданих, які отримують інші країни
+			navy_intel_to_others = 15 #модифікатор флотських розвідданих, які отримують інші країни
+			airforce_intel_to_others = 20 #модифікатор повітряних розвідданих, які отримують інші країни
+			embargo_cost_factor = 1.0 #модифікатор вартості ембарго
+			embargo_threshold_factor = -0.5 #модифікатор порогу ембарго
+			guarantee_tension = 0.50 #модифікатор напруги при наданні гарантій
+		}
+	}
+
+}
